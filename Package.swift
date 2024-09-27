@@ -19,15 +19,15 @@ let package = Package(
     targets: [
         .target(
             name: "FacebookCore",
-            dependencies: [],
+            dependencies: ["FBSDKCoreKit"],
             path: "Sources/Core"),
         .target(
             name: "FacebookLogin",
-            dependencies: ["FacebookCore"],
+            dependencies: ["FacebookCore", "FBSDKCoreKit", "FBSDKLoginKit"],
             path: "Sources/Login"),
         .target(
             name: "FacebookShare",
-            dependencies: ["FacebookCore"],
+            dependencies: ["FacebookCore", "FBSDKCoreKit", "FBSDKShareKit"],
             path: "Sources/Share"),
     ]
 )
